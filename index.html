@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Vision | Professional Videography & Photography Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            100: '#FFF5E6',
+                            200: '#FFE8B2',
+                            300: '#FFD166',
+                            400: '#FFB347',
+                            500: '#FF9500',
+                            600: '#E68600',
+                            700: '#CC7700',
+                        },
+                        secondary: '#FFFFFF',
+                        accent: '#FFF0D9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 149, 0, 0.2);
+        }
+        
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary-100">
+    <!-- Navigation -->
+    <nav class="bg-primary-500 text-secondary fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-3">
+                        <i class="fas fa-camera text-primary-500 text-xl"></i>
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-secondary">MY Vision</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-secondary hover:text-primary-200 transition">Home</a>
+                    <a href="#about" class="text-secondary hover:text-primary-200 transition">About</a>
+                    <a href="#services" class="text-secondary hover:text-primary-200 transition">Services</a>
+                    <a href="#portfolio" class="text-secondary hover:text-primary-200 transition">Portfolio</a>
+                    <a href="#testimonials" class="text-secondary hover:text-primary-200 transition">Testimonials</a>
+                    <a href="#contact" class="text-secondary hover:text-primary-200 transition">Contact</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-secondary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-secondary hover:text-primary-200 transition">Home</a>
+                <a href="#about" class="block py-2 text-secondary hover:text-primary-200 transition">About</a>
+                <a href="#services" class="block py-2 text-secondary hover:text-primary-200 transition">Services</a>
+                <a href="#portfolio" class="block py-2 text-secondary hover:text-primary-200 transition">Portfolio</a>
+                <a href="#testimonials" class="block py-2 text-secondary hover:text-primary-200 transition">Testimonials</a>
+                <a href="#contact" class="block py-2 text-secondary hover:text-primary-200 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-24 pb-32 md:pt-32 md:pb-40 flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-secondary mb-6">Capture Your <span class="text-primary-300">Perfect Moments</span></h1>
+            <p class="text-xl md:text-2xl text-primary-200 mb-10 max-w-3xl mx-auto">Professional videography and photography services in Tarapur, Gujarat. Turning your visions into stunning visual stories.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-primary-500 hover:bg-primary-600 text-secondary font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Book a Session</a>
+                <a href="#portfolio" class="bg-secondary hover:bg-gray-100 text-primary-700 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-accent">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-700 mb-4">About <span class="text-primary-500">MY Vision</span></h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Photographers" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-500 p-4 rounded-lg shadow-lg">
+                            <h3 class="text-secondary text-xl font-bold">5+ Years</h3>
+                            <p class="text-primary-200">Experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-primary-700 mb-4">Our Story</h3>
+                    <p class="text-gray-700 mb-6">Founded by Mayur Katariya and Yuvrajsinh, MY Vision is a premier photography and videography studio based in Tarapur, Gujarat. We are passionate about capturing life's most precious moments with creativity and technical excellence.</p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-camera-retro text-secondary text-xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-primary-700">Our Mission</h4>
+                        </div>
+                        <p class="text-gray-700">To create visually stunning and emotionally compelling imagery that tells your unique story with authenticity and artistry.</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-primary-500 text-secondary px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Professional Equipment</span>
+                        </div>
+                        <div class="bg-primary-500 text-secondary px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Creative Team</span>
+                        </div>
+                        <div class="bg-primary-500 text-secondary px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Affordable Packages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary-500 mb-2">500+</div>
+                    <div class="text-gray-700">Happy Clients</div>
+                </div>
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary-500 mb-2">1000+</div>
+                    <div class="text-gray-700">Projects Completed</div>
+                </div>
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary-500 mb-2">50+</div>
+                    <div class="text-gray-700">Events Covered</div>
+                </div>
+                <div class="bg-secondary p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary-500 mb-2">24/7</div>
+                    <div class="text-gray-700">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-700 mb-4">Our <span class="text-primary-500">Services</span></h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">We offer a comprehensive range of photography and videography services tailored to meet your specific needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Wedding Photography" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-ring text-secondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Wedding Photography</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Capture the magic of your special day with our professional wedding photography services that preserve every precious moment.</p>
+                        <a href="#" class="text-primary-500 font-semibold hover:text-primary-700 transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1575505586569-9a352f5d2067?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Commercial Videography" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-video text-secondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Commercial Videography</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Professional video production services for businesses, including promotional videos, product showcases, and corporate videos.</p>
+                        <a href="#" class="text-primary-500 font-semibold hover:text-primary-700 transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529333166447-4f4921cb123b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Portrait Photography" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-secondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Portrait Photography</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Professional portrait sessions for individuals, couples, and families, capturing your personality in stunning imagery.</p>
+                        <a href="#" class="text-primary-500 font-semibold hover:text-primary-700 transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Event Coverage" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-calendar-alt text-secondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Event Coverage</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive photography and videography services for corporate events, parties, and special occasions.</p>
+                        <a href="#" class="text-primary-500 font-semibold hover:text-primary-700 transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80" alt="Product Photography" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-box-open text-secondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Product Photography</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">High-quality product images that showcase your merchandise in the best possible light for e-commerce and marketing.</p>
+                        <a href="#" class="text-primary-500 font-semibold hover:text-primary-700 transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579820010410-c10411aaaa88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2097&q=80" alt="Aerial Photography" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-drone-alt text-secondary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Aerial Photography</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Stunning aerial shots and videos captured with professional drone equipment for unique perspectives.</p>
+                        <a href="#" class="text-primary-500 font-semibold hover:text-primary-700 transition">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-primary-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-700 mb-4">Our <span class="text-primary-500">Portfolio</span></h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Explore our collection of work that showcases our creativity and expertise in visual storytelling.</p>
+            </div>
+            
+            <div class="mb-12 flex justify-center">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button data-filter="all" class="portfolio-filter px-4 py-2 text-sm font-medium rounded-l-lg bg-primary-500 text-white hover:bg-primary-600 transition">All</button>
+                    <button data-filter="photography" class="portfolio-filter px-4 py-2 text-sm font-medium bg-primary-200 text-primary-700 hover:bg-primary-300 transition">Photography</button>
+                    <button data-filter="videography" class="portfolio-filter px-4 py-2 text-sm font-medium bg-primary-200 text-primary-700 hover:bg-primary-300 transition">Videography</button>
+                    <button data-filter="wedding" class="portfolio-filter px-4 py-2 text-sm font-medium bg-primary-200 text-primary-700 hover:bg-primary-300 transition">Wedding</button>
+                    <button data-filter="commercial" class="portfolio-filter px-4 py-2 text-sm font-medium rounded-r-lg bg-primary-200 text-primary-700 hover:bg-primary-300 transition">Commercial</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="gallery-item portfolio-item" data-category="wedding photography">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wedding Photography" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="text-center p-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Wedding Photography</h3>
+                                <p class="text-primary-200">Traditional Gujarati Wedding</p>
+                                <button class="mt-4 px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="gallery-item portfolio-item" data-category="videography commercial">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Commercial Videography" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="text-center p-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Commercial Video</h3>
+                                <p class="text-primary-200">Local Business Promotion</p>
+                                <button class="mt-4 px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="gallery-item portfolio-item" data-category="photography portrait">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Portrait Photography" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="text-center p-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Portrait Session</h3>
+                                <p class="text-primary-200">Professional Headshots</p>
+                                <button class="mt-4 px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="gallery-item portfolio-item" data-category="wedding videography">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c62de2b3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wedding Videography" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="text-center p-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Wedding Film</h3>
+                                <p class="text-primary-200">Cinematic Wedding Video</p>
+                                <button class="mt-4 px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="gallery-item portfolio-item" data-category="commercial photography">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Product Photography" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="text-center p-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Product Shoot</h3>
+                                <p class="text-primary-200">Jewelry Collection</p>
+                                <button class="mt-4 px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="gallery-item portfolio-item" data-category="photography aerial">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Aerial Photography" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <div class="text-center p-4">
+                                <h3 class="text-xl font-bold text-white mb-2">Aerial View</h3>
+                                <p class="text-primary-200">Tarapur Landscape</p>
+                                <button class="mt-4 px-4 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-full transition duration-300 transform hover:scale-105">View More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-primary-500 text-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client <span class="text-primary-200">Testimonials</span></h2>
+                <div class="w-24 h-1 bg-primary-200 mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-primary-200">Hear what our clients have to say about their experience working with MY Vision.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-primary-600 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Priya Patel</h4>
+                            <p class="text-primary-200">Wedding Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-6">"Mayur and Yuvrajsinh captured our wedding day perfectly! The photos are stunning and truly reflect the emotions of the day. Their attention to detail and creative eye made all the difference."</p>
+                    <div class="flex text-primary-200">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-primary-600 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Rajesh Mehta</h4>
+                            <p class="text-primary-200">Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-6">"The promotional video MY Vision created for our business exceeded all expectations. Their professionalism and creative approach helped showcase our products in the best possible way. Highly recommended!"</p>
+                    <div class="flex text-primary-200">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-primary-600 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Ananya Sharma</h4>
+                            <p class="text-primary-200">Family Portrait Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-6">"We had an amazing family portrait session with MY Vision. They made us feel comfortable and captured beautiful, natural moments. The final images are treasures we'll cherish forever."</p>
+                    <div class="flex text-primary-200">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-700 mb-4">Meet The <span class="text-primary-500">Team</span></h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Our talented team of photographers and videographers dedicated to capturing your special moments.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                <!-- Team Member 1 -->
+                <div class="text-center max-w-xs">
+                    <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary-500">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mayur Katariya" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Mayur Katariya</h3>
+                    <p class="text-primary-500 font-semibold mb-4">Co-Founder & Lead Photographer</p>
+                    <p class="text-gray-600 mb-4">With over 7 years of experience, Mayur specializes in wedding and portrait photography, capturing emotions through his lens.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary-500 hover:text-primary-700 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-primary-500 hover:text-primary-700 text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-primary-500 hover:text-primary-700 text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="text-center max-w-xs">
+                    <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary-500">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Yuvrajsinh" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Yuvrajsinh</h3>
+                    <p class="text-primary-500 font-semibold mb-4">Co-Founder & Videography Director</p>
+                    <p class="text-gray-600 mb-4">Yuvrajsinh brings cinematic vision to every project, with expertise in commercial videography and wedding films.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary-500 hover:text-primary-700 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-primary-500 hover:text-primary-700 text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-primary-500 hover:text-primary-700 text-xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-accent">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-700 mb-4">Get In <span class="text-primary-500">Touch</span></h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Ready to capture your special moments? Contact us for bookings and inquiries.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                        
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                <option value="">Select a service</option>
+                                <option value="wedding">Wedding Photography</option>
+                                <option value="portrait">Portrait Photography</option>
+                                <option value="commercial">Commercial Videography</option>
+                                <option value="event">Event Coverage</option>
+                                <option value="product">Product Photography</option>
+                                <option value="aerial">Aerial Photography</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Our Studio</h4>
+                                    <p class="text-gray-600">123 Creative Street, Tarapur, Gujarat, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone-alt text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Call Us</h4>
+                                    <p class="text-gray-600">+91 98765 43210</p>
+                                    <p class="text-gray-600">+91 98765 43211</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email Us</h4>
+                                    <p class="text-gray-600">info@myvisionstudio.com</p>
+                                    <p class="text-gray-600">bookings@myvisionstudio.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Working Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 7:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 10:00 AM - 5:00 PM</p>
+                                    <p class="text-gray-600">Sunday: By Appointment Only</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-600 text-secondary flex items-center justify-center transition">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-600 text-secondary flex items-center justify-center transition">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-600 text-secondary flex items-center justify-center transition">
+                                    <i class="fab fa-youtube text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-600 text-secondary flex items-center justify-center transition">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.075881648258!2d72.8762143154026!3d21.14548598593624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051f8b5c5f3f9%3A0x6a1f4a4e3b5e5f1f!2sTarapur%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-primary-500 text-secondary">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Subscribe to Our Newsletter</h2>
+            <p class="text-xl text-primary-200 mb-8 max-w-2xl mx-auto">Stay updated with our latest work, offers, and photography tips delivered to your inbox.</p>
+            
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button class="bg-primary-700 hover:bg-primary-800 px-6 py-3 rounded-r-lg font-bold transition">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-700 text-primary-200 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center mr-3">
+                            <i class="fas fa-camera text-primary-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary">MY Vision</h3>
+                    </div>
+                    <p class="mb-4">Professional photography and videography studio based in Tarapur, Gujarat, dedicated to capturing your precious moments.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary-200 hover:text-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-primary-200 hover:text-secondary transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-primary-200 hover:text-secondary transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-primary-200 hover:text-secondary transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-secondary transition">Portfolio</a></li>
+                        <li><a href="#testimonials" class="hover:text-secondary transition">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-secondary transition">Wedding Photography</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Commercial Videography</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Portrait Photography</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Event Coverage</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Product Photography</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Aerial Photography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Contact Info</h3>
+                    <address class="not-italic space-y-2">
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>123 Creative Street, Tarapur, Gujarat, India</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>+91 98765 43210</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>info@myvisionstudio.com</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Mon-Fri: 9AM - 7PM</span>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-primary-600 mt-12 pt-8 text-center">
+                <p>&copy; 2023 MY Vision Studio. All Rights Reserved. Designed with <i class="fas fa-heart text-red-500"></i> by MY Vision Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary-500 text-secondary shadow-lg flex items-center justify-center transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-primary-500', 'text-white');
+                    btn.classList.add('bg-primary-200', 'text-primary-700');
+                });
+                
+                // Add active class to clicked button
+                button.classList.remove('bg-primary-200', 'text-primary-700');
+                button.classList.add('bg-primary-500', 'text-white');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
